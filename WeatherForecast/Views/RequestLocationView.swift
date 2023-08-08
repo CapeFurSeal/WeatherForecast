@@ -8,28 +8,6 @@
 import SwiftUI
 import CoreLocation
 
-struct ContentView: View {
-    @StateObject var locationViewModel = LocationViewModel()
-    
-    var body: some View {
-        switch locationViewModel.authorizationStatus {
-        case .notDetermined:
-            AnyView(RequestLocationView())
-                .environmentObject(locationViewModel)
-        case .restricted:
-            WeatherForecastView()
-        case .denied:
-            WeatherForecastView()
-        case .authorizedAlways, .authorizedWhenInUse:
-            WeatherForecastView()
-                .environmentObject(locationViewModel)
-        default:
-            Text("Unexpected status")
-        }
-    }
-}
-
-
 struct RequestLocationView: View {
     @EnvironmentObject var locationViewModel: LocationViewModel
     

@@ -15,7 +15,7 @@ struct APIManager {
         static let weatherForecastPath = "/data/2.5/forecast"
         static let currentWeatherForecastPath = "/data/2.5/weather"
         static let apiKeyQueryItemName = "appid"
-        static let openWeatherApiKey = "f5306abfb130c58ecc46da1cd43f8b32"
+        static let openWeatherApiKey = ""
         static let metricUnitsQueryItemName = "metric"
     }
     
